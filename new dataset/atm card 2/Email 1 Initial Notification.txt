@@ -1,0 +1,13 @@
+Email 1: Initial Notification
+
+Subject: Urgent: Suspicious ATM Transactions on Your Account
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+We regret to inform you that our fraud monitoring system has detected several unauthorized ATM withdrawals from your account ending in 1234. The transactions, totaling $1,500, were made at various ATM locations in the city over the past two days.
+This appears to be a clear case of ATM fraud, and we have immediately taken steps to protect your account. Please review your recent transactions and contact us immediately if you did not make or authorize these withdrawals.
+Your financial security is our top priority, and we are committed to resolving this issue and preventing any further unauthorized activity on your account.
+Best regards,
+Fraud Detection Team

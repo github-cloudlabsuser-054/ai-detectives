@@ -1,0 +1,12 @@
+Email 8: Feedback Request
+Subject: Your Feedback Matters
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+Your feedback is crucial to us as we strive to enhance our fraud detection and prevention processes. We would greatly appreciate if you could take a few moments to share your experience with our handling of the ATM fraud incident.
+Your insights and suggestions will help us identify areas for improvement and better protect our customers like yourself from similar fraudulent activities in the future. We are committed to continuously enhancing our services to ensure the highest level of security and customer satisfaction.
+Please feel free to provide any feedback or comments you may have. Your input is invaluable to us.
+Best regards,
+Fraud Detection Team

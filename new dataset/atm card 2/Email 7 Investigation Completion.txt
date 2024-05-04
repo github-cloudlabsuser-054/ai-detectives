@@ -1,0 +1,14 @@
+Email 7: Investigation Completion
+
+Subject: Case Closed: ATM Fraud Investigation
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+I am pleased to inform you that our comprehensive investigation into the ATM fraud incident has been successfully concluded. The unauthorized withdrawals have been fully reversed, and your account has been restored to its original balance.
+Furthermore, we have implemented additional security measures, including enhanced monitoring and fraud detection protocols, to safeguard your account against future fraudulent activities. The perpetrators of this ATM fraud scheme have been apprehended, and the relevant authorities are pursuing appropriate legal action.
+Your financial well-being and the security of your accounts are of the utmost importance to us. We are committed to ensuring that you do not suffer any further losses or inconvenience as a result of this incident.
+Thank you for your patience and cooperation throughout this process. Please let me know if there is anything else we can do to assist you.
+Best regards,
+Fraud Detection Team

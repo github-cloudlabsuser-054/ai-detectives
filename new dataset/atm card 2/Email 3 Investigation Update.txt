@@ -1,0 +1,14 @@
+Email 3: Investigation Update
+
+Subject: Re: Urgent: Suspicious ATM Transactions on Your Account
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+Our investigation has revealed that the unauthorized ATM withdrawals were made at three different ATM locations in the downtown area over the past two days. Based on the transaction details, it appears that your debit card information may have been compromised through the use of a skimming device installed at one of the ATMs.
+We have immediately notified the local authorities and are working closely with them to trace the source of the fraud and identify the perpetrators. Our internal security team is also conducting a thorough review of the ATM network to detect and remove any potential skimming devices.
+Rest assured, we are taking all necessary steps to secure your account and prevent any further unauthorized activity. We will continue to monitor your account closely and keep you informed of any developments in the investigation.
+Please let me know if you have any other information that could assist us in resolving this issue.
+Best regards,
+Fraud Detection Team

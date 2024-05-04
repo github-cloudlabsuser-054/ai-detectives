@@ -1,0 +1,14 @@
+Email 2: Customer Response
+
+Subject: Re: Urgent: Suspicious ATM Transactions on Your Account
+
+From: John Doe johndoe@email.com
+To: Fraud Detection Team fraud@bankname.com
+
+Dear Fraud Detection Team,
+
+I can confirm that I did not make or authorize the ATM withdrawals you have reported. The last time I used the ATM was a week ago, and the transactions you mentioned are completely unfamiliar to me.
+This is very concerning, and I would appreciate if you could provide me with more details about the fraudulent transactions, including the specific ATM locations, dates, and times of the withdrawals. Any additional information you can share would be helpful in assisting with the investigation.
+I am available to work closely with you to resolve this issue and ensure the security of my account. Please let me know the next steps I should take.
+Regards,
+John Doe

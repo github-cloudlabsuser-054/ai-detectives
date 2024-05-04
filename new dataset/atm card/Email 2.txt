@@ -1,0 +1,9 @@
+Email 2:
+Subject: Re: Potential ATM Card Fraud Detected - Case ID: #4567
+
+Dear Jane Smith,
+
+Thank you for bringing this to our attention. We will review the transaction details and the customer's account activity to determine if further investigation is needed. We will keep you updated on our findings.
+
+Best regards,
+Emily Johnson

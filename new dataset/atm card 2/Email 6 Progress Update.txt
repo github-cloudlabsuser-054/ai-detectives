@@ -1,0 +1,16 @@
+Email 6: Progress Update
+
+Subject: Case Update: ATM Fraud Investigation
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+
+I'm pleased to inform you that our investigation team has made significant progress in identifying the source of the ATM fraud incident. We have traced the fraudulent withdrawals back to a skimming device that was installed on an ATM located in the downtown area.
+Working closely with the local authorities, we have been able to remove the skimming device and apprehend the individuals responsible for the fraud scheme. The perpetrators have been arrested, and the relevant law enforcement agencies are now pursuing legal action against them.
+As an additional measure to enhance the security of our ATM network, we are implementing advanced fraud detection technologies and increasing the frequency of ATM inspections. We are committed to ensuring that our customers, like yourself, can safely use our ATM services without the fear of falling victim to such fraudulent activities.
+Please let me know if you have any other concerns or questions. We will continue to monitor your account and keep you informed of any further developments.
+Regards,
+Fraud Detection Team
+

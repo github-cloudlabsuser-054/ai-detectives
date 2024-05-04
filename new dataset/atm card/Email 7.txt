@@ -1,0 +1,11 @@
+Email 7:
+Subject: Customer Feedback: Suspicious ATM Card Transactions - Case ID: #4567
+
+Dear Team,
+
+I have spoken with customer Alice Johnson (Email: alice.johnson@example.com) regarding the suspicious ATM card transactions. The customer has confirmed that they did not make the transactions and has expressed concern over the security of their account.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Emily Johnson

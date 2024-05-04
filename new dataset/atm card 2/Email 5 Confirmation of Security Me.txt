@@ -1,0 +1,12 @@
+Email 5: Confirmation of Security Measures
+
+Subject: Re: Urgent: Suspicious ATM Transactions on Your Account
+
+From: John Doe johndoe@email.com
+To: Fraud Detection Team fraud@bankname.com
+
+Dear Fraud Detection Team,
+I have changed my ATM PIN as recommended, and I will refrain from using any ATMs until I receive the new card. Thank you for the prompt action in addressing this issue and blocking my debit card to prevent further unauthorized access.
+I appreciate your efforts to investigate the source of the fraud and enhance the security of the ATM network. Please keep me updated on the progress of the investigation and any additional steps I should take to protect my account.
+Best regards,
+John Doe

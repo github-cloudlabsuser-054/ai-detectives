@@ -1,0 +1,12 @@
+Email 10: Resolution Confirmation
+
+Subject: Case Resolution: ATM Fraud Investigation
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+We are pleased to confirm that all unauthorized ATM transactions related to the fraud incident have been successfully reversed, and your account has been fully restored. Additionally, we have implemented robust security measures, including enhanced monitoring and fraud detection protocols, to safeguard your accounts against future fraudulent activities.
+We appreciate your patience, cooperation, and understanding throughout this challenging situation. Your feedback and support have been invaluable in helping us improve our fraud detection and prevention processes.
+Rest assured, we remain committed to protecting your financial well-being and ensuring the security of your accounts. Should you have any further concerns or require assistance, please do not hesitate to reach out to us.
+Best regards,
+Fraud Detection Team

@@ -1,0 +1,14 @@
+Email 4: Security Measures
+
+Subject: Re: Urgent: Suspicious ATM Transactions on Your Account
+
+From: Fraud Detection Team fraud@bankname.com
+To: John Doe johndoe@email.com
+
+Dear John,
+As a precautionary measure, we have immediately blocked your debit card to prevent any further unauthorized use. We are also in the process of issuing you a new card with enhanced security features.
+In the meantime, we strongly recommend that you change your ATM PIN immediately and avoid using any ATMs until you receive the new card. This will help mitigate the risk of additional fraudulent transactions.
+Additionally, we will be refunding the unauthorized withdrawals to your account within the next 24 hours. Please let us know if you notice any other suspicious activity on your account.
+We understand the inconvenience this may cause, but your financial security is our top priority. Please do not hesitate to contact us if you have any other questions or concerns.
+Thank you for your cooperation,
+Fraud Detection Team

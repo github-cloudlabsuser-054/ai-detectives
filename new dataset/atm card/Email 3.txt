@@ -1,0 +1,23 @@
+Email 3:
+Subject: Update: Suspicious ATM Card Transactions - Case ID: #4567
+
+Dear Team,
+
+Upon further investigation into the suspicious ATM card transactions involving customer Alice Johnson (Email: alice.johnson@example.com), we have identified additional details that support the suspicion of fraud.
+
+Additional Details:
+
+Case ID: #4567
+Transactions IDs: ATM-TXN-789, ATM-TXN-790
+Card Number: xxxx-xxxx-xxxx-1234
+Transaction Amount: $500
+Date of Transaction: 2024-05-01
+Merchant Name: ABC Store
+Payment Location: New York
+Behavioral Analysis:
+We have observed a significant increase in the customer's ATM withdrawals, particularly at non-local ATM locations, indicating a change in withdrawing habits.
+
+Please advise on the next steps to take in this case.
+
+Thank you,
+Daniel Brown
