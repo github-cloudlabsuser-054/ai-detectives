@@ -1,19 +1,18 @@
 import openai
 from openai import AzureOpenAI
 import pandas as pd
+import dotenv
+import os
 
 # Set OpenAI API key for Azure
+envpath = os.path.join(os.getcwd(),".env")
+dotenv.load_dotenv(envpath)
 
 client = AzureOpenAI(
-    api_key="c8751add6d5f406a95f91505279e33c6",
-    api_version="2023-07-01-preview",
-    azure_endpoint="https://hsbc-aiml-team-resource.openai.azure.com/"
+  azure_endpoint = "https://aidetectives.openai.azure.com/", 
+  api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
+  api_version="2024-02-15-preview"
 )
-
-# openai.api_type = "azure"
-# openai.api_base = "https://hsbc-aiml-team-resource.openai.azure.com/"
-# openai.api_version = "2023-07-01-preview"
-# openai.api_key = "c8751add6d5f406a95f91505279e33c6"
 
 # Evaluation prompt template based on G-Eval
 EVALUATION_PROMPT_TEMPLATE = """
@@ -130,15 +129,16 @@ def get_geval_score(
         summary=summary,
     )
 
-    
+
     response = client.chat.completions.create(
-        model="hsbchackathongpt432k2023",
+        model="ai-detectives-gpt316k",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0,
-        max_tokens=2500,
-        top_p=1,
+        temperature=0.1,
+        max_tokens=5000,
+        top_p=0.95,
         frequency_penalty=0,
         presence_penalty=0,
+        stop=None,
     )
     #print(response)
     return response.choices[0].message.content
@@ -153,7 +153,12 @@ evaluation_metrics = {
 
 
 
-def get_eval_table(original_doc, summary):
+def get_eval_table(original_docs, summary):
+
+    complete_thread = ""
+    for doc in original_docs:
+        complete_thread += doc.page_content
+
     summaries = {"Summary 1": summary}
 
     data = {"Evaluation Type": [], "Summary Type": [],"Review Comment":[]}
@@ -162,7 +167,7 @@ def get_eval_table(original_doc, summary):
         for summ_type, summary in summaries.items():
             data["Evaluation Type"].append(eval_type)
             data["Summary Type"].append(summ_type)
-            result = get_geval_score(criteria, steps, original_doc, summary, eval_type)
+            result = get_geval_score(criteria, steps, complete_thread, summary, eval_type)
             review_comment = result.strip()
             if len(review_comment) == 0:
                 review_comment = "No Review Comments available"

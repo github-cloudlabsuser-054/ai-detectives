@@ -1,44 +1,41 @@
+map_template = """The following is a set of documents
+{docs}
+Given a documents consists of Reporting's potential fraud committed, generate a chronological sequence of summaries by dividing the text into coherent chunks. Each chunk should represent a distinct event or action taken during the exchange between the bank representatives.
+Maintain all relevant information and Add it below events Heading should only be in Bold related to Fraud Type Names of people involved in conversation,  Case ID, Customer id, Customer name, Account no, Transactions IDs, Card Number, Transaction ID, Recipient ID, Recipients name, Transaction Amount, Date of Transaction, Type of Purchase, Merchant Name, Payment location, Payment location,Loan Case ID, Loan Amount Applied For, Date of Loan Application,
+Loan Applied Location, Cheque Number and names of the system used in the conversation. do not duplicate details if given in one event already.
+Ensure that chunks are correlated with each other, following a chronological order, and providing answers or contradictions. You can use the bullet points to describe the events.
+Make sure to Include "Is it a fraud or reported by mistake" Customers behaviours like  Change in spending habits Transactions amount max and min based on your understanding at the end.
+inculde all the actions taken till date on the matters that are came to light.
+Only show the most important cause and do not include all relevant details. keep the entire summary concise but use separation for presentation. give brief title for each event. make sure that any time or duration mentioned is included in the summary. also show the event title in bold letters. Try to identify the patterns of fraud committed based on conversation, Examine the information in the emails to determine the duration between the initiation and resolution of the complaint.
 
-PROMPT_USE_SHORT = """
-Please provide a brief summary with respective to each email or event not more than one sentence.but use separation for presentation.
-
-follow below instructions while generating the response:
-
-event can be describe using below format
-        <b>{event title}{timestamp}</b>
-        <li>{event descr 1}</li>
-        <li>{event descr 2}</li>
-        <li>{event descr 3}</li>
-        <b>{Root Cause of Customer Dissatisfaction}</b>
-        <b>{Turn around time}{duration in number of days}</b>
+email summary can be describe using below format:
+<p><b>email title [timestamp]</b>
+<li>descr 1 </li>
+<li>descr 2</li>
+<li>descr 3</li>
+    and so on...
 """
 
-PROMPT_USE_LONG = """Please do not use previous request and response as context.Given a lengthy text consisting of bank customer complaints, generate a chronological sequence of events
-        by dividing the text into coherent chunks. Each chunk should represent a distinct event or action taken during the exchange
-        between the customer and the bank representative. Maintain all relevant information related to time, account numbers,
-        and names of the system used in the conversation. Ensure that chunks are correlated with each other, following a chronological order,
-        and providing answers or contradictions.you can use the bullet points to describe the events. If possible, include root cause of customer dissatisfaction based
-        on your understanding at the end.only show the most important cause and do not include other irrelavent issues.
-        keep the entire summary concise but use separation for presentation.
-        give  brief title for each event. make sure that any time or duration mentioned is included in the summary.
-        also show the event title in bold letters.Calculate the total turnaround time(days) for the customer complaint based on the provided emails or events,
-        Examine the information in the emails to determine the duration between the initiation and resolution of the complaint.
-        event can be describe using below format
-        <p><b>{event title}{timestamp}</b>
-        <li>{event descr 1}</li>
-        <li>{event descr 2}</li>
-        <li>{event descr 3}</li>
-
-        after all events are described, you should give the below information.
-
-        <b>{Root Cause of Customer Dissatisfaction}</b>
-        <b>{Turn around time}{duration in number of days}</b>"""
-
-
-TRANSCRIPT_SUMMARY_PROMPT = """
-Please check the attached transcript. You need so identify and summarize each usecase in terms of problem statement, 
-team members involved, solution approach, any challenges faced by team during usecase implementation. 
-There are multiple usecase sprovided so give details for each usecase.Please give summary with enough details for each use case 
-and bullet points with atleast 3-5  lines for each section if possible.
+# Reduce
+reduce_template = """The following is set of summaries:
+{docs}
+Take these and distill it into a final, consolidated summary of the main themes. 
+email summary can be describe using below format
+<p><b>email title [timestamp]</b>
+<li>descr 1 </li>
+<li>descr 2</li>
+<li>descr 3</li>
+after all events are described, you should give the below information.
+<b>People/Parties involved in the fraud</b>
+<b>Type of fraud commited</b>
+In case no inforamation found for the points ignore the field
 """
 
+
+fraud_resolution="""
+Based on the provided summary,
+{summary}
+ please provide the optimal course of action for a bank representative to take regarding the fraud case involving customer. 
+Ensure the solution is concise and focuses solely on the events described above. 
+Additionally, include preventive measures for both the customer and the bank to prevent similar incidents in the future, with 5 key points. Avoid repetition and ensure each point is unique for every new fraud scenario.
+"""

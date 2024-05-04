@@ -1,0 +1,20 @@
+Email-4:
+Subject: Update on Bank Impersonation Fraud Investigation - Case ID: 123456
+Dear Emily Johnson,
+
+Thank you for your cooperation and for providing the phone number used by the fraudulent caller. Our security team has thoroughly investigated this incident and can confirm that it was indeed an attempt at bank impersonation fraud.
+
+We have taken several actions to address this matter:
+- The phone number provided has been blocked and added to our fraud prevention system to prevent further misuse.
+- We have notified the relevant authorities and are working with them to identify the individuals responsible for this attempted scam.
+- We have reviewed our internal processes to identify any potential vulnerabilities that may have been exploited and have implemented additional security measures to strengthen our defenses against such fraudulent activities.
+
+Your vigilance and quick response in this situation have been instrumental in helping us address this issue. We commend you for your proactive approach in protecting your account and for not falling victim to the scammer's tactics.
+
+Moving forward, we will continue to monitor your account closely for any suspicious activity. Please do not hesitate to contact us immediately if you notice anything unusual or if you have any other concerns.
+
+Thank you again for your cooperation and for your trust in our bank. We are committed to safeguarding your financial information and ensuring the security of your account.
+
+Best regards,
+Mark Thompson
+mark.thompson@bank.com

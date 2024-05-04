@@ -6,7 +6,7 @@ authors = ["github-cloudlabsuser-054 <github_cloudlabsuser_054@cloudlabsaiuser.c
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.12"
 django = "^5.0.4"
 openai = "^1.24.0"
 python-dotenv = "^1.0.1"
@@ -17,6 +17,8 @@ tiktoken = "^0.6.0"
 chromadb = "^0.5.0"
 langchain = "^0.1.17"
 langchainhub = "^0.1.15"
+azure-storage-blob = "^12.19.1"
+unstructured = "^0.13.6"
 
 
 

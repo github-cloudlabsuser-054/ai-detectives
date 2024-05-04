@@ -23,8 +23,8 @@ client = AzureOpenAI(
 )
 
 st.set_page_config(
-    page_title="Customer Complaint Investigation Summary Engine",
-    page_icon="🔍",
+    page_title="Fraud detection",
+    page_icon="⚠️",
     layout="wide"
 )
 
@@ -270,7 +270,7 @@ def main():
             #st.markdown(styled_text, unsafe_allow_html=True)
     if session_state.similar_summary_df_available:
         st.success('Done!')
-    col3, col4 = st.columns([0.5,5])
+    col3, col4 = st.columns([0.7,1])
     
     if session_state.summary_generated:
         with col3:

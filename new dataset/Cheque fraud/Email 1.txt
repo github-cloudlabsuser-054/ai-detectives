@@ -1,0 +1,24 @@
+Email 1:
+Subject: Potential Fraud Detected - Case ID: #8721
+
+Dear Team,
+
+I am writing to inform you about a suspicious cheque transaction involving customer Alice Smith (Email: alice.smith@example.com). The transaction occurred on 2024-04-01 for the amount of $1,000. We have identified this transaction as potentially fraudulent due to irregularities in the customer's account activity.
+
+Customer Details:
+
+Customer ID: CUS546321
+Customer Name: Alice Smith
+Account Number: ACCT12345678
+Transaction Details:
+
+Transaction ID: ABCD1234567
+Cheque Number: 123456
+Recipient ID: REC789123
+Recipient Name: Bob's Store
+Date of Transaction: 2024-04-01
+Payment Location: New York
+Please advise on the appropriate actions to take in response to this transaction.
+
+Thank you,
+[Your Name]
