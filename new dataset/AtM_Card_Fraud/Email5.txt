@@ -1,0 +1,19 @@
+Email 5:
+Subject: Progress Update: ATM Card Fraud Investigation - Case ID: #8721 - 2024-04-03
+
+Dear Team,
+
+Our investigation into the suspicious ATM card transactions by customer John Smith has revealed further evidence of fraudulent activity. We have confirmed that the transactions were made using a cloned card.
+
+Actions Taken:
+
+Rejected the unauthorized transactions
+Blocked further transactions from the cloned card
+Initiated a review of all recent transactions on the customer's account
+Customer Follow-Up:
+We have contacted the customer to inform them of the unauthorized transactions and to provide them with support and resources to protect their account in the future.
+
+Thank you for your cooperation throughout this investigation.
+
+Best regards,
+Fraud Detection Team

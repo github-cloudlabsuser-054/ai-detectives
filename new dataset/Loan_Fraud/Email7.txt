@@ -1,0 +1,12 @@
+Email 7:
+Subject: Customer Feedback: Suspicious Loan Application - Case ID: #1234
+Date: 2024-04-04
+
+Dear Team,
+
+I have spoken with customer Alice Johnson (Email: alice.johnson@example.com) regarding the suspicious loan application. The customer has denied any knowledge of the application and has expressed concern over potential identity theft.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Emily Johnson

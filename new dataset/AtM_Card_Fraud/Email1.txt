@@ -1,0 +1,24 @@
+Email 1:
+Subject: Potential ATM Card Fraud Detected - Case ID: #8721 - 2024-04-01
+
+Dear Team,
+
+We have identified a potential case of ATM card fraud involving customer John Smith. Several unauthorized transactions were made on 2024-04-01, totaling $500. We suspect fraudulent activity due to deviations from the customer's typical withdrawing habits.
+
+Customer Details:
+
+Customer ID: CUS12345
+Customer Name: John Smith
+Account Number: ACCT67890
+Transaction Details:
+
+Transaction IDs: TRANS001, TRANS002
+Card Number: XXXX-XXXX-XXXX-3456
+Transaction Amount: $500
+Date of Transaction: 2024-04-01
+Merchant Name: XYZ Store
+Payment Location: New York
+Please advise on the appropriate actions to take.
+
+Thank you,
+Bank Team

@@ -1,0 +1,28 @@
+Email 3:
+Subject: Update: Suspicious Transaction - Case ID: #8721
+Date: 2024-04-02
+
+Dear Team,
+
+We have completed our review of the suspicious cheque transaction involving customer Alice Smith (Email: alice.smith@example.com). Upon further investigation, we have identified several additional transactions that raise concerns about potential fraudulent activity.
+
+Customer Details:
+
+Customer ID: CUS546321
+Customer Name: Alice Smith
+Account Number: ACCT12345678
+Additional Transaction Details:
+
+Transaction IDs: WXYZ2345678, MNOP3456789
+Cheque Numbers: 234567, 345678
+Recipient IDs: REC456789, REC987654
+Recipient Names: Charlie's Store, David's Shop
+Dates of Transactions: 2024-04-02, 2024-04-03
+Payment Locations: Chicago, Los Angeles
+Behavioral Analysis:
+We have observed a change in the customer's withdrawing habits, with an increase in the frequency of withdrawals. This behavior change may be related to the suspicious transactions.
+
+Please review the additional information and advise on the next steps.
+
+Thank you,
+Emily Johnson

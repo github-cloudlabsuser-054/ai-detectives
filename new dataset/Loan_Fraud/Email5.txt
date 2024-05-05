@@ -1,0 +1,20 @@
+Email 5:
+Subject: Progress Update: Loan Fraud Investigation - Case ID: #1234
+Date: 2024-04-03
+
+Dear Team,
+
+Our investigation into the suspicious loan application by customer Alice Johnson (Email: alice.johnson@example.com) has revealed further evidence of fraudulent activity. We have confirmed that the loan application was submitted using falsified documents.
+
+Actions Taken:
+
+Rejected the loan application
+Blocked further loan applications from the customer
+Initiated a review of all recent transactions on the customer's account
+Customer Follow-Up:
+We have contacted the customer to inform them of the rejection of their loan application and to advise them on the proper use of our loan services.
+
+Thank you for your cooperation throughout this investigation.
+
+Best regards,
+Sophia Lee

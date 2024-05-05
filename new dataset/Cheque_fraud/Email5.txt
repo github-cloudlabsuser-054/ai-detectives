@@ -1,0 +1,20 @@
+Email 5:
+Subject: Progress Update: Fraud Investigation - Case ID: #8721
+Date: 2024-04-03
+
+Dear Team,
+
+We have completed our investigation into the suspicious cheque transactions involving customer Alice Smith (Email: alice.smith@example.com). Our findings indicate that the transactions were indeed fraudulent.
+
+Actions Taken:
+
+Blocked the recipient accounts
+Initiated a refund to the customer
+Enhanced monitoring of similar transactions in the future
+Customer Follow-Up:
+We have contacted the customer to inform them of the fraudulent transactions and have provided them with support and resources to protect their account in the future.
+
+Thank you for your cooperation throughout this investigation.
+
+Best regards,
+Sophia Lee
