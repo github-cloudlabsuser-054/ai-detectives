@@ -34,6 +34,16 @@ llm = AzureChatOpenAI(
         "stop":None}
         )
 
+def getStuffSummary(docs):
+    map_prompt = PromptTemplate.from_template(map_template)
+    map_chain = LLMChain(llm=llm, prompt=map_prompt)
+    combine_documents_chain = StuffDocumentsChain(
+        llm_chain=map_chain, document_variable_name="docs"
+    )
+    result = combine_documents_chain.invoke(docs)
+    output_parser = StrOutputParser()
+    return output_parser.parse(result['output_text'])
+
 def getSummary(docs):
     
     map_prompt = PromptTemplate.from_template(map_template)
@@ -59,7 +69,7 @@ def getSummary(docs):
         # If documents exceed context for `StuffDocumentsChain`
         collapse_documents_chain=combine_documents_chain,
         # The maximum number of tokens to group documents into.
-        token_max=5000,
+        token_max=4000,
     )
 
 
@@ -98,7 +108,9 @@ def load_text_file(file):
   """Loads a text file and returns its contents."""
   with open(file, "r") as f:
     return f.read().decode("utf-8")
-
+  
+def click_button():
+    st.session_state.clicked = True
 
 def main(): 
      
@@ -113,8 +125,10 @@ def main():
         session_state.resolution = ""
     if not hasattr(session_state, "docs"):
         session_state.docs = []
-    if 'uploaded_file' not in st.session_state:
-        st.session_state.uploaded_files = None
+    if not hasattr(session_state, "uploaded_file"):    
+        session_state.uploaded_files = []
+    if 'clicked' not in st.session_state:
+        session_state.clicked = False
 
     
         # Custom CSS to center the title
@@ -135,22 +149,21 @@ def main():
         """, unsafe_allow_html=True)
 
     # Apply the custom style to the title
-    st.markdown('<div class="title-style">Fraud Summrization app</div>', unsafe_allow_html=True)
+    st.markdown('<div class="title-style">detective.ai</div>', unsafe_allow_html=True)
 
     with st.form("my-form", clear_on_submit=True):
         uploaded_files = st.file_uploader("Choose multiple text files", accept_multiple_files=True, type=['txt'])
         submitted = st.form_submit_button("submit")
+        if submitted:
+            session_state.uploaded_files = uploaded_files
+            session_state.docs = getDocuments(uploaded_files=uploaded_files)
+        
     # Allow the user to upload multiple files
     # uploaded_files = st.file_uploader("Choose multiple text files", accept_multiple_files=True, type=['txt'])
-
-    if uploaded_files is not None:
-        st.session_state.uploaded_files = uploaded_files
-        session_state.docs = getDocuments(uploaded_files=uploaded_files)
-     
+ 
     for doc in session_state.docs:
         st.write(f"**Document: {os.path.basename(doc.metadata['source'])}**")
         st.text_area(label="", value=doc.page_content, height=200)
-    
     
     # if st.button("Clear File Uploader"):
     #     st.session_state.uploaded_file = None
@@ -161,9 +174,11 @@ def main():
         with st.spinner('Processing...'):
          if clearblob():
             st.warning('all emails deleted!!', icon="⚠️")
-            st.session_state.uploaded_file = None
+            session_state.uploaded_file = None
+            session_state.summary = ""
+            session_state.summary_generated = False
+            session_state.resolution = ""
             session_state.docs=[]
-            st.experimental_rerun()
 
     # List of directories from Blob container (replace this with your actual list)
     directories = getblobdirs()
@@ -172,14 +187,16 @@ def main():
     for directory in directories:
         display_directory_element(directory)
 
-    if st.button("Generate Summary"):
+    if st.button("Generate Summary", on_click=click_button):
         with st.spinner('Processing...'):
-            time.sleep(10)
-            if session_state.docs:
-                session_state.summary = getSummary(session_state.docs)
-                session_state.summary_generated = True
-                session_state.resolution = getResolution(session_state.summary)
-    
+            if st.session_state.clicked:
+                if session_state.docs:
+                    # session_state.summary = getSummary(session_state.docs)
+                    session_state.summary = getStuffSummary(session_state.docs)
+                    session_state.summary_generated = True
+                    session_state.resolution = getResolution(session_state.summary)
+                    session_state.clicked = False
+        
     custom_css = """
     <style>
         button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
@@ -210,18 +227,18 @@ def main():
 
     with tab1:
         # Row of boxes
-        styled_text = f"<div style='background-color:#F0FFFF; padding:20px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Summary:</strong><br></div>{session_state.summary}</div>"
+        styled_text = f"<div style='background-color:#F0FFFF; padding:20px; margin : 10 px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Summary:</strong><br></div>{session_state.summary}</div>"
         st.markdown(styled_text, unsafe_allow_html=True)        
 
     with tab2:
-        styled_text = f"<div style='background-color:#F0FFFA; padding:20px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Resolution:</strong><br></div>{session_state.resolution}</div>"
+        styled_text = f"<div style='background-color:#F0FFFA; padding:20px; margin : 10 px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Resolution:</strong><br></div>{session_state.resolution}</div>"
         st.markdown(styled_text, unsafe_allow_html=True)
     with tab3:
          if len(session_state.summary) > 0:
             
             eval_table = get_eval_table(session_state.docs, session_state.summary)
             eval_table_str = eval_table.to_html().replace("&lt;li&gt;", "<li>").replace("&lt;/li&gt;","</li>").replace("\\n","").replace("\\n","")
-            styled_text = f"<div style='background-color:#fdf0ff; padding:20px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Summary Evaluation:</strong><br></div>{eval_table_str.strip()}</div>"
+            styled_text = f"<div style='background-color:#fdf0ff; padding:20px; margin : 10 px; overflow-y: scroll; height: 250px; width:100%'><div><strong>Summary Evaluation:</strong><br></div>{eval_table_str.strip()}</div>"
             st.markdown(styled_text, unsafe_allow_html=True)
     
     col1, col2 = st.columns([0.7,1])
@@ -236,12 +253,13 @@ def main():
                 session_state.summary = ""
                 session_state.summary_generated = False
                 session_state.resolution = ""
-                st.experimental_rerun()
+                st.rerun()
 
 
 
 if __name__ == "__main__":
         main()
+
 
 
 
