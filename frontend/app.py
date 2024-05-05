@@ -197,6 +197,7 @@ def main():
             session_state.summary_generated = False
             session_state.resolution = ""
             session_state.docs=[]
+            st.rerun()
 
     # List of directories from Blob container (replace this with your actual list)
     directories = getblobdirs()
@@ -230,6 +231,7 @@ def main():
             border-radius: 4px 4px 0px 0px;
             gap: 1px;
             padding: 10px;
+            margin 10px;
         }
 
         .stTabs [aria-selected="true"] {
