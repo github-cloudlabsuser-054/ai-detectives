@@ -112,6 +112,25 @@ def load_text_file(file):
 def click_button():
     st.session_state.clicked = True
 
+def save_to_file(summary, resolution, output_folder="output"):
+    current_directory = os.getcwd()
+    #req_path="\\".join(current_directory.split("\\")[:-1])
+    output_path = os.path.join(current_directory, output_folder)
+
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    filename = f"{output_path}\Summary_{timestamp}.txt"
+    
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(summary)
+        file.write(resolution)
+
+    st.success(f"File downloaded successfully! Check the '{output_folder}' folder.")  # Display success message
+    return filename
+
+
 def main(): 
      
     session_state = st.session_state
@@ -170,7 +189,7 @@ def main():
     #     session_state.docs = []
     #     st.experimental_rerun()
 
-    if st.button("Clear files"):
+    if st.button("Clear"):
         with st.spinner('Processing...'):
          if clearblob():
             st.warning('all emails deleted!!', icon="⚠️")
@@ -246,19 +265,19 @@ def main():
     if len(session_state.summary) > 0:
         with col1:
             if st.button("Download Summary", help="Click to download the generated summary"):
-                save_to_file(session_state.sequence_of_events, session_state.current_summary_type)
+                save_to_file(session_state.summary, session_state.resolution)
 
         with col2:
-            if st.button("Clear"):
-                session_state.summary = ""
-                session_state.summary_generated = False
-                session_state.resolution = ""
-                st.rerun()
-
+            pass
+            # if st.button("Clear"):
+            #     session_state.summary = ""
+            #     session_state.summary_generated = False
+            #     session_state.resolution = ""
+            #     st.rerun()
 
 
 if __name__ == "__main__":
-        main()
+    main()
 
 
 
@@ -276,21 +295,3 @@ def display_directory_element(directory_name):
     if st.button(f"Custom Action for {directory_name}"):
         # Add your custom action code here
         st.write(f"Custom action performed for {directory_name}.")
-
-
-def save_to_file(data, summary_type, output_folder="output"):
-    current_directory = os.getcwd()
-    #req_path="\\".join(current_directory.split("\\")[:-1])
-    output_path = os.path.join(current_directory, output_folder)
-
-    if not os.path.exists(output_path):
-        os.mkdir(output_path)
-
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    filename = f"{output_path}\customer_complaint_{summary_type.lower()}_{timestamp}.txt"
-    
-    with open(filename, "w", encoding="utf-8") as file:
-        file.write(data)
-
-    st.success(f"File downloaded successfully! Check the '{output_folder}' folder.")  # Display success message
-    return filename

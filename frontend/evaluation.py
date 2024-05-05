@@ -159,7 +159,7 @@ def get_eval_table(original_docs, summary):
     for doc in original_docs:
         complete_thread += doc.page_content
 
-    summaries = {"Summary 1": summary}
+    summaries = {"Summary": summary}
 
     data = {"Evaluation Type": [], "Summary Type": [],"Review Comment":[]}
 
