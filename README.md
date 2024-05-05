@@ -17,13 +17,12 @@ The implementation of generative AI in fraud detection can significantly enhance
 
 ## Design
 
-add flow diagram here
 <img
   src="assets/flowdiagram.png"
   alt="flow"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
-add refe sys Design here
+
 <img
   src="assets/HLD.png"
   alt="HLD"
@@ -43,8 +42,11 @@ add refe sys Design here
 	- Stuff: Simply “stuff” all your documents into a single prompt.
 		
 	- Map-reduce: Summarize each document on it’s own in a “map” step and then “reduce” the summaries into a final summary.
-	
-    <img src="assets/summarization.png" alt="HLD" title="Optional title"style="display: inline-block; margin: 0 auto; max-width: 300px">
+ <img
+  src="assets/summarization.png"
+  alt="HLD"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 - The user interface for the application is built with Streamlit is an open-source Python framework help you create and  ship frontend apps that can be written in python.
 ## How to run locally
