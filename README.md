@@ -50,7 +50,7 @@ The implementation of generative AI in fraud detection can significantly enhance
 
 - The user interface for the application is built with Streamlit is an open-source Python framework help you create and  ship frontend apps that can be written in python.
 ## How to run locally
-
+go to frontend folder and run app.py with streamlit run app.py and create a .env file
 ### project dependancies:
 
 #### install following dependancies and run the app as streamlit application :
